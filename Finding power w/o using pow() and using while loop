@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int x,y,z=1,count=0;;
+
+int main()
+{
+    printf("enter the numbers:");
+    scanf ("%d  %d", &x,&y);
+    while (count<y){
+        z =x*z;
+        count=count+1;
+    }
+    printf("%d to the power %d is %d", x,y,z);
+    
+    return 0;
+}
