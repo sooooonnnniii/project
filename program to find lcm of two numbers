@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int x,y,max;
+int main() {
+    printf("enter the numbers:");
+    scanf("%d %d", &x, &y);
+    if(x>y){
+        max =x;
+    }
+    else {
+        max=y;
+    }
+    if((max%x)==0 && (max%y)==0){
+        printf("%d is lcm ", max);
+    }
+    else {
+        while(max<(x*y)){
+            max =max+1;
+            if((max%x)==0 && (max%y)==0){
+                printf("%d is lcm of given num", max);
+                break;
+            }
+        }
+    }
+     return 0;
+}
