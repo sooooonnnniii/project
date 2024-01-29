@@ -1,0 +1,33 @@
+#include <stdio.h>
+int x,y,rem,dvnd,dvsr;
+
+int main()
+{
+    printf("enter the numbrs:");
+    scanf("%d %d", &x, &y);
+    if(x>y){
+    dvnd =x;
+    dvsr =y;
+         }
+    else {
+        dvnd =y;
+        dvsr =x;
+    }
+    
+    if ((dvnd%dvsr)==0){
+        printf("%d is gcd of given numbrs", dvsr);
+    }
+    else {
+        rem =dvnd%dvsr;
+        while(rem>1){
+        rem =dvnd%dvsr;
+        dvnd =dvsr;
+        dvsr = rem;
+       if ((dvnd%dvsr)==0){
+       printf("%d is gcd of given numbrs", dvsr);
+       break;
+    }
+            
+        }
+        
+    }
