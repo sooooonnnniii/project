@@ -1,0 +1,35 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    // Write C code here
+
+ 
+    char str[20];
+    char str2[20];
+    char key = 'G';
+    printf("enter the string:");
+ 
+    // using scanset in scanf
+    scanf("%[^\n]s", str);
+ 
+    // printing read string
+    printf("%s\n", str);
+    int length;
+    length = strlen(str);
+    
+    for (int i=0; i<length; i++){
+        if (str[i]==key){
+            continue;
+        }
+        else {
+        str2[i] = str[i];
+        printf ("%c", str2[i]);
+            
+        }
+        
+    }
+ 
+    return 0;
+}
