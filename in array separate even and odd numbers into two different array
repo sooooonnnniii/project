@@ -1,0 +1,49 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int arr[100], arre[50],arro[50];
+    
+  int i,j,n,ctr,min=0,max=0,x=0,y=0;
+  printf("Enter te number of elements in an array:");
+  scanf("%d", &n);
+  for(i=0; i<n; i++){
+      printf("the element %d is:", i);
+      scanf("%d", &arr[i]);
+  }
+  for (i=0; i<n; i++){
+      if((arr[i]%2)==0){
+          arre[x]=arr[i];
+          x++;
+          
+      }
+      else {
+           arro[y]=arr[i];
+          y++;
+          
+      }
+  }
+  printf("Number of elements of array whic are even are:");
+  for (i=0; i<x; i++){
+      printf("%d\t", arre[i]);
+      
+  }
+  printf("\n");
+  printf("Number of elements of array whic are odd are:");
+  
+   for (i=0; i<y; i++){
+      printf("%d\t", arro[i]);
+      
+  }
+  
+
+    return 0;
+}
