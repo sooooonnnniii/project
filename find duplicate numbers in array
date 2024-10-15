@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+int main()
+{
+    int arr[100];  // Declare an array of size 100
+    int n, ctr = 0;  // n for number of elements, ctr for counting duplicates
+    int i, j;  // Loop counters
+    int is_duplicate;  // Variable to check if an element is already counted
+
+    // Input the number of elements to be stored in the array
+    printf("Input the number of elements to be stored in the array: ");
+    scanf("%d", &n);
+
+    // Input n elements in the array
+    printf("Input %d elements in the array:\n", n);
+    for (i = 0; i < n; i++)
+    {
+        printf("element - %d : ", i);
+        scanf("%d", &arr[i]);
+    }
+
+    // Check for duplicates
+    for (i = 0; i < n; i++)
+    {
+        is_duplicate = 0;  // Reset duplicate flag for each new element
+
+        // Check if the current element has already been counted
+        for (j = 0; j < i; j++)
+        {
+            if (arr[i] == arr[j])
+            {
+                is_duplicate = 1;  // Mark the element as already counted
+                break;
+            }
+        }
+
+        // If the element hasn't been counted before, check for further duplicates
+        if (!is_duplicate)
+        {
+            for (j = i + 1; j < n; j++)
+            {
+                if (arr[i] == arr[j])
+                {
+                    ctr++;  // Increment duplicate count
+                    break;  // Exit inner loop as we only need to count once
+                }
+            }
+        }
+    }
+
+    // Print the total number of duplicate elements found
+    printf("Total number of duplicate elements found in the array: %d\n", ctr);
+    return 0;
+}
