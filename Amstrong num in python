@@ -1,0 +1,14 @@
+def Armstrong_num(num):
+ Ams_num =0
+ while num !=0:
+    digit = num%10
+    Ams_num = Ams_num+ digit**3
+    num =num//10
+ return Ams_num
+print("Enter the number:")
+num = int(input())
+result =Armstrong_num(num)
+if (result==num):
+     print("num", num, "is a amstrong number")
+else:
+    print("not a armstrong num")
