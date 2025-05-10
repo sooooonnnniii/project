@@ -1,0 +1,13 @@
+def reverse_num(num):
+ reverse_number = 0
+ while num !=0:
+    digit = num%10
+    reverse_number = reverse_number*10 + digit
+ #   print(reverse_number)
+    num =num//10
+ #   print(num)
+ print(reverse_number)
+print("Enter the number:")
+num = input()
+print(num)
+reverse_num(int(num))
