@@ -1,0 +1,21 @@
+def binary_num(a):
+    if a ==0:
+        flag =True
+    
+    flag = True
+    while a !=0:
+     digit =a%10
+     if (digit !=0 and digit !=1):
+         flag =False
+         break
+     a =a//10
+    return flag
+
+print("Enter the numbers:")
+a =int(input())
+result = binary_num(a)
+if result:
+    print(a,"is a binary num")
+else:
+    print(a, "is not a binary num")
+
