@@ -1,0 +1,25 @@
+def greatest_num(a,b,c):
+    if (a>b and a>c):
+        print(a ,"is greatest of three numbers")
+    elif(b>c):
+        print(b ,"is greatest of three numbers")
+    else:
+        print(c ,"is greatest of three numbers")
+
+print("Enter the numbers:")
+a =int(input())
+b =int(input())
+c =int(input())
+greatest_num(a,b,c)
+
+or use max function 
+def greatest_num(a, b, c):
+    return max(a, b, c)
+
+print("Enter the numbers:")
+a = int(input())
+b = int(input())
+c = int(input())
+
+greatest = greatest_num(a, b, c)
+print(f"{greatest} is the greatest of the three numbers")
