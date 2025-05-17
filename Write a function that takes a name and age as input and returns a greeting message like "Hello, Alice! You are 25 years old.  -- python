@@ -1,0 +1,11 @@
+def greet_user():
+    user_input = input("Enter your name and age (e.g., John 25): ")
+    try:
+        parts = user_input.strip().split()
+        name = " ".join(parts[:-1])
+        age = parts[-1]
+        print(f"Hello {name}! You are {age} years old.")
+    except IndexError:
+        print("Invalid input. Please enter both your name and age.")
+
+greet_user()
