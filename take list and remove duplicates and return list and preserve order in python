@@ -1,0 +1,10 @@
+def num_mdfy(num):
+    num2 = []
+    for i in num:
+        if i not in num2:
+            num2.append(i)
+    return num2
+
+num = [1, 2, 2, 5, 4, 8, 8, 9, 4, 1]
+result = num_mdfy(num)
+print(result)
