@@ -1,0 +1,7 @@
+def print_gfg(n):
+    if n<1:
+        return 
+    (print_gfg(n-1))
+    print (n, end =" ")
+n =int(input())
+print_gfg(n)
