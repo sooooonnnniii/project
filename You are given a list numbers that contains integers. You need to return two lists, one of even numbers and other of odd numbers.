@@ -1,0 +1,24 @@
+def sep(x):
+    even = []
+    odd = []
+    if len(x) == 0:
+        print("List is empty")
+        return even, odd
+    else:
+        for i in x:
+            if i % 2 == 0:
+                even.append(i)
+            else:
+                odd.append(i)
+        return even, odd
+
+n = int(input("Enter the number of elements: "))
+x = []
+for _ in range(n):
+    element = int(input("Enter an element: "))
+    x.append(element)
+
+print("List:", x)
+even_list, odd_list = sep(x)
+print("Even numbers:", even_list)
+print("Odd numbers:", odd_list)
