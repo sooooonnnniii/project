@@ -1,0 +1,22 @@
+def third_largest(arr):
+    if not arr or len(arr) < 2:
+        return -1
+
+    first = second = third =float('-inf')
+    for num in arr:
+        if num > first:
+            third =second
+            second = first
+            first = num
+        elif first > num > second :
+            third =second
+            second = num
+        elif second >num >third:
+            third =num 
+            
+
+    return third if third != float('-inf') else -1
+
+# Example usage
+x = [-1, -2, -3, -4]
+print(third_largest(x))  # Output: -2
